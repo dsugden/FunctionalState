@@ -1,0 +1,1 @@
+This is a little learning project motivating the State Monad.

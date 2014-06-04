@@ -41,29 +41,6 @@ object MutableBad{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 object FunctionalState {
 
 
