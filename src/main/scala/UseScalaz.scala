@@ -4,7 +4,6 @@ object UseScalaz {
   def main(args: Array[String]): Unit = {
 
     import scalaz._
-    import scalaz.State.{get => current}
 
 
     case class Better(total: List[Int])
@@ -20,11 +19,11 @@ object UseScalaz {
 
     val test = for {
       r1 <- sum(1)
-      state0 <- current // debuggin
+      state0 <- State.get[Better]
       r2 <- sum(2)
-      state1 <- current // debuggin
+      state1 <- State.get[Better]
       r3 <- sum(3)
-      state2 <- current // debuggin
+      state2 <-  State.get[Better]
     } yield {
       (
         state0 :: state1 :: state2 :: Nil,
